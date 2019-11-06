@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: centos-mysql
+  labels:
+    app: centos-mysql
+spec:
+  nodeName: node1
+  containers:
+  - name: centos-mysql
+    image: centos6-mysql
+    imagePullPolicy: IfNotPresent

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busy
+  labels:
+    app: busy
+spec:
+  containers:
+  - name: busy
+    image: busybox:latest
+    imagePullPolicy: IfNotPresent
