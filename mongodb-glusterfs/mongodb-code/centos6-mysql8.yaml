@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: centos-mysql
+  name: centos
   labels:
-    app: centos-mysql
+    app: centos
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: centos-mysql
+      app: centos
   template:
     metadata:
       labels:
-        app: centos-mysql
+        app: centos
     spec:
       containers:
-      - name: centos-mysql
-        image: centos6-mysql8-v1:latest
+      - name: centos
+        image: centos6-v3:latest
         imagePullPolicy: IfNotPresent
         command: [ "/bin/bash", "-c", "--" ]
         args: [ "while true; do sleep 30; done;" ]
